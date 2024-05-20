@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to right, #111, #222);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 80%;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.1); /* 255 not 250 */
+  border-radius: 20px; /* 20px not 30px */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  overflow: hidden;
+}
+body::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: rgb(255, 0, 0);
+  clip-path: circle(40% at right 70%); /* 40% not 35% */
+  position: absolute;
+  z-index: -1;
+}
+nav {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+.logo {
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700; /* 700 not 500 */
+}
+ul li {
+  display: inline-block;
+  margin: 0px 6px; /* 6px not 5px */
+  font-size: 18px;
+  font-weight: 500; /* you forgot it */
+}
+li a:hover {
+  color: #0011ff; /* you forgot it too */
+}
+.content {
+  height: 80%; /* you forgot it too */
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* aline-items not aline-content */
+  margin: auto;
+}
+.text {
+  width: 40%; /* it's 40% not 320px */
+  display: flex;
+  flex-direction: column; /*  */
+  gap: 20px; /*  */
+}
+
+.text h2 {
+  text-transform: uppercase;
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  word-spacing: 5px;
+}
+.text p {
+  font-size: 18px; /* of curse it's 18px not 16px */
+  line-height: 25px;
+  margin: 10px 0; /* i just use "gap" not margin */
+  letter-spacing: 1px; /* you forgot it too */
+}
+.imge {
+  width: 40%; /* it's 40% not 350px */
+}
+img {
+  width: 400px;
+}
+@media (min-width: 950px) and (max-width: 1150px) {
+  img {
+    width: 330px; /* it's 330px not 350px */
+  }
+}
+@media (max-width: 950px) {
+  img {
+    width: 300px;
+  }
+  body::after {
+    clip-path: circle(50% at bottom);
+  }
+  .text,
+  .imge {
+    width: 80%;
+  }
+  nav,
+  .content {
+    flex-direction: column;
+    justify-content: center; /* center not space-between */
+    align-items: center;
+  }
+}
+@media (max-width: 700px) {
+  /* all of that from your mind */
+  img {
+    width: 200px;
+  }
+}
